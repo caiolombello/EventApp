@@ -1,4 +1,4 @@
-package com.eventapp.eventapp;
+package com.eventapp.eventapp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
