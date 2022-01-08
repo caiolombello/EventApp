@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,6 +9,17 @@
     <title>Events</title>
 </head>
 <body>
-Hello World
+<h1>Event List</h1>
+<h3><a href="/eventRegister">Register Event</a></h3>
+
+<div th:each="event : ${events}">
+    <div class="row">
+        <p><span th:text="${event.name}"></span></p>
+        <p><span th:text="${event.local}"></span></p>
+        <p><span th:text="${event.date}"></span></p>
+        <p><span th:text="${event.hour}"></span></p>
+    </div>
+</div>
+
 </body>
 </html>
